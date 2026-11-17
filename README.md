@@ -4,7 +4,7 @@ This submission intentionally has two independently deployable folders: `fronten
 
 ## Local run
 
-In separate terminals run `node backend/server.js` and `node frontend/local-server.js`, then open `http://localhost:3000`. Log in as `admin` / `BCIT12`.
+In separate terminals run `node backend/server.js` and `node dev-frontend.js`, then open `http://localhost:3000`. Log in as `admin` / `BCIT12`.
 
 ## Publish checklist
 

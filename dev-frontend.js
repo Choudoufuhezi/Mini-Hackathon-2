@@ -1,12 +1,13 @@
 "use strict";
 
-// A deliberately small static server.  Deploy this directory separately from backend.
+// Local-only static server. It intentionally lives outside frontend/ so Vercel
+// deploys that directory as static files rather than a Node function.
 const http = require("http");
 const fs = require("fs");
 const path = require("path");
 
 const port = Number(process.env.PORT || 3000);
-const root = __dirname;
+const root = path.join(__dirname, "frontend");
 const types = { ".html": "text/html; charset=utf-8", ".js": "text/javascript; charset=utf-8", ".css": "text/css; charset=utf-8" };
 
 http.createServer((req, res) => {
